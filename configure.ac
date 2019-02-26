@@ -12,7 +12,7 @@ AC_ARG_VAR([IORBSIZE], AS_HELP_STRING([Block size for ior -b, ], [use e.g. IORBS
 AC_ARG_VAR([H5PW_GN],  AS_HELP_STRING([Image size in pixels for pwrite, ], [use e.g. H5PW_GN=8000]))
 AC_ARG_VAR([H5PW_CHN], AS_HELP_STRING([Chunk size in pixels for pwrite, ], [use e.g. H5PW_CHN=1000]))
 AC_ARG_VAR([MPICMD],   AS_HELP_STRING([Command to execute mpi progrmas, ], [use e.g. MPICMD=/usr/bin/mpirun]))
-AC_ARG_VAR([TESTFSPATH], AS_HELP_STRING([Path to testing filesystem, ], [use e.g. TESTFSPATH=/gpfs/gpfs8m/]))
+AC_ARG_VAR([TESTFSPATH], AS_HELP_STRING([Path to testing filesystem, ], [use e.g. TESTFSPATH=/tmp]))
 AC_ARG_VAR([HDF5_USE_SHLIB], AS_HELP_STRING([Use hdf5 shared libraries, ], [use e.g. HDF5_USE_SHLIB=yes]))
 
 # If --with-mpi=auto is used, try to find MPI, but use standard C compiler if it is not found.
