@@ -1,0 +1,9 @@
+========= mivdesy-stest ======================================
+= MAX IV tests for GF storage at DESY
+==============================================================
+
+There two types of test:
+ - standard ior
+ - pwrite3dc - An image-like parallel data writer.
+
+See doc/hdf_pwrite3dc.pdf for more details.
