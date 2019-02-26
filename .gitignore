@@ -6,8 +6,10 @@
 /autom4te.cache/
 /config.*
 /configure
-/m4/
 /stamp-h?
+/compile
+/missing
+/install-sh
 .deps/
 .dirstamp
 *.o
