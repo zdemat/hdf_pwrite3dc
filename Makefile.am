@@ -3,10 +3,11 @@ SUBDIRS = src
 
 local_ior = ior-3.0.1
 
-bin_PROGRAMS = hdf_pwrite3dc hdf_pread3dc
+bin_PROGRAMS = hdf_pwrite3dc hdf_pread3dc hdf_pread_eiger
 EXTRA_DIST = conf tests results doc $(local_ior).tar.gz
 hdf_pwrite3dc_SOURCES = src/hdf_pwrite3dc.f90 src/kinds.f90 $(local_ior).tar.gz
 hdf_pread3dc_SOURCES =  src/hdf_pread3dc.f90  src/kinds.f90
+hdf_pread_eiger_SOURCES =  src/hdf_pread_eiger.f90  src/kinds.f90
 
 foo.$(OBJEXT): src/kinds.f90
 
@@ -40,7 +41,7 @@ ior:
 	echo "Creating symbolic link to ior."
 	ln -s $(local_ior)/src/ior ior
 
-all: hdf_pwrite3dc hdf_pread3dc ior conf mpirun
+all: hdf_pwrite3dc hdf_pread3dc hdf_pread_eiger ior conf mpirun
 
 #FORCE: # no dependencies or commands
 #.PHONY: FORCE # hint for gnu make, ignored by others
