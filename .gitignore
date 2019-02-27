@@ -1,7 +1,18 @@
+# Binaries
+/hdf_pread3dc
+/hdf_pread_eiger
+/hdf_pwrite3dc
+/ior
+/mpirun
+
+# Project
+/ior-3.0.1/
+
 # Automake
 /Makefile
 /Makefile.in
 /src/Makefile.in
+/src/Makefile
 /aclocal.m4
 /autom4te.cache/
 /config.*
