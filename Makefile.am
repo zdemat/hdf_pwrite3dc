@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = foreign
 SUBDIRS = src
 
-local_ior = ior-3.0.1
+local_ior = ior-3.3.0
 
 bin_PROGRAMS = hdf_pwrite3dc hdf_pread3dc hdf_pread_eiger
 EXTRA_DIST = conf tests results doc $(local_ior).tar.gz
