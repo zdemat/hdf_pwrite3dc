@@ -29,6 +29,7 @@ program hdf_pwrite3dc
 
         integer, parameter :: ndims = 3
         integer, parameter :: halo  = 0
+	integer(kind=hsize_t), parameter :: cd_nelmts = 2
 
         integer :: g_Nx   = 8000 ! Image slab size (in pixels)
         integer :: ch_Nx  = 1000 ! Chunk size (in pixels)
@@ -68,6 +69,11 @@ program hdf_pwrite3dc
                                  stride(ndims), block(ndims)
         ! Global hyper slab info
         integer(kind=hsize_t) :: g_size(ndims), g_start(ndims)
+
+	! Filter id
+	integer :: filter_id
+	! Filter parameters
+	integer :: cd_values(cd_nelmts)
 
         ! Local data array
         integer(kind=i_hp), allocatable :: ld(:,:)
@@ -324,6 +330,11 @@ program hdf_pwrite3dc
         else
            call h5pset_fill_time_f(c_id, H5D_FILL_TIME_NEVER_F, ierr)
         endif
+
+	filter_id = 32008
+	cd_values(1) = 0 ! let bitshuffle decide the blocks
+	cd_values(2) = 2 ! nthreads
+	call h5pset_filter_f(c_id, filter_id, H5Z_FLAG_OPTIONAL_F, cd_nelmts, cd_values, ierr)
 
         write(0,*) "Process:", id, ", chckpoint:", 8
 
