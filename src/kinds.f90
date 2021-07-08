@@ -5,9 +5,10 @@ module kinds
         implicit none
 
         private
-        public  :: i_sp, i_dp,      &
+        public  :: i_hp, i_sp, i_dp,   &
                    r_sp, r_dp, r_qp
 
+        integer, parameter                           :: i_hp = INT16
         integer, parameter                           :: i_sp = INT32
         integer, parameter                           :: i_dp = INT64
 
