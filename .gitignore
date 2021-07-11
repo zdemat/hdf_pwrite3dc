@@ -2,11 +2,12 @@
 /hdf_pread3dc
 /hdf_pread_eiger
 /hdf_pwrite3dc
+/hdf_pwrite_bslz4
 /ior
 /mpirun
 
 # Project
-/ior-3.0.1/
+/ior-3.3.0/
 
 # Automake
 /Makefile
